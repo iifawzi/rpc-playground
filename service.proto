@@ -1,0 +1,12 @@
+syntax = "proto3";
+service RouteGuide {
+    rpc GetFeature(Body) returns (stream Response) {}
+}
+
+message Body {
+    string name = 1;
+}
+
+message Response {
+string result = 1;
+}
